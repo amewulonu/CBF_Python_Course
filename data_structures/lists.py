@@ -19,6 +19,16 @@ print("Shopping List:", shopping_list)
 number_list = [0] * 5
 print("Number List:", number_list)
 
+#create a list from a tuple
+tuple_data = (10, 20, 30)
+tuple_list = list(tuple_data)
+print("List from Tuple:", tuple_list)
+
+# create a list from a set
+set_data = {"apple", "banana", "cherry"}
+set_list = list(set_data)
+print("List from Set:", set_list)
+
 # # accessing list elements using indexing
 print("First element in names:", names[0])
 #numbers = [1, 2, 3, 4, 5]
@@ -54,12 +64,62 @@ print("Updated Numbers List after inserting at the end:", numbers)
 numbers.insert(100, 7)
 print("Updated Numbers List after inserting at out-of-bounds index:", numbers)
 
+# removing elements from a list by value
+# mixed = [1, "two", 3.0, True, "two"]
+mixed.remove("two")
+print("Mixed List after remove:", mixed)
+# mixed.remove("not_in_list")  # This would raise a ValueError
+
+# removing elements from a list by index
+# numbers = [1, 2, 2.5, 3, 4, 5, (3.5, 3.75), 6, 7]
+removed_element = numbers.pop(2)
+print("Removed Element:", removed_element)
+print("Numbers List after pop:", numbers)
+removed_last = numbers.pop()
+print("Removed Last Element:", removed_last)
+print("Numbers List after popping last element:", numbers)
+removed_first = numbers.pop(0)
+print("Removed First Element:", removed_first)
+print("Numbers List after popping first element:", numbers)
+
 #clear all elements from a list
-# mixed = [1, "two", 3.0, True]
+mixed = [1, "two", 3.0, True]
 mixed.clear()
 print("Mixed List after clear:", mixed)
 
+#other list operations
+# concatenation
+list1 = [1, 2, 3]
+list2 = ["a", "b", "c"]
+combined_list = list1 + list2
+print("Combined List:", combined_list)  
 
+# reversal
+list1.reverse()
+print("Reversed List1:", list1)
+# sorting
+unsorted_list = [5, 2, 9, 1, 5, 6]
+unsorted_list.sort()
+print("Sorted List:", unsorted_list)
+# length 
+print("Length of Names List:", len(names))
+# membership testing
+print("Is 'Alice' in Names List?", "Alice" in names)
+#slicing
+sliced_names = names[1:4]
+print("Sliced Names List (index 1 to 3):", sliced_names)
+# slicing with step
+sliced_numbers = numbers[::2]
+print("Sliced Numbers List with step 2:", sliced_numbers)
+# negative indexing and slicing
+last_two_names = names[-2:]
+print("Last two names in Names List:", last_two_names)
+# negative step slicing
+reversed_numbers = numbers[::-1]
+print("Reversed Numbers List using slicing:", reversed_numbers)
+#negative step with specific indices
+neg_step_slice = names[4:1:-1]
+print("Names List sliced with negative step (index 4 to 2):", neg_step_slice)
 
 
 
