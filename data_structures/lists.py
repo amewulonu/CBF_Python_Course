@@ -121,6 +121,21 @@ print("Reversed Numbers List using slicing:", reversed_numbers)
 neg_step_slice = names[4:1:-1]
 print("Names List sliced with negative step (index 4 to 2):", neg_step_slice)
 
+# deleting a list
+del unsorted_list
+# print("Unsorted List after delete:", unsorted_list)  # This will raise an error since 'unsorted_list' is deleted
+print("Unsorted List has been deleted and cannot be accessed.")
+
+#counting occurrences of an element
+names = ["Alice", "Bob", "Charlie", "Diana", "Alice", "Bob"]
+alice_count = names.count("Alice")
+print("Number of times 'Alice' appears in Names List:", alice_count)
+#finding index of an element
+first_bob_index = names.index("Bob")
+print("Index of first occurrence of 'Bob' in Names List:", first_bob_index)
+#finding index of an element with start and end parameters
+second_bob_index = names.index("Bob", first_bob_index + 1)
+print("Index of second occurrence of 'Bob' in Names List:", second_bob_index)   
 
 
 
