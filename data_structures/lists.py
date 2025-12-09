@@ -101,6 +101,9 @@ print("Reversed List1:", list1)
 unsorted_list = [5, 2, 9, 1, 5, 6]
 unsorted_list.sort()
 print("Sorted List:", unsorted_list)
+#can also sort in descending order
+unsorted_list.sort(reverse=True)
+print("Sorted List in Descending Order:", unsorted_list)
 # length 
 print("Length of Names List:", len(names))
 # membership testing
@@ -121,6 +124,30 @@ print("Reversed Numbers List using slicing:", reversed_numbers)
 neg_step_slice = names[4:1:-1]
 print("Names List sliced with negative step (index 4 to 2):", neg_step_slice)
 
+# deleting a list
+del unsorted_list
+# print("Unsorted List after delete:", unsorted_list)  # This will raise an error since 'unsorted_list' is deleted
+print("Unsorted List has been deleted and cannot be accessed.")
+
+#counting occurrences of an element
+names = ["Alice", "Bob", "Charlie", "Diana", "Alice", "Bob"]
+alice_count = names.count("Alice")
+print("Number of times 'Alice' appears in Names List:", alice_count)
+#finding index of an element
+first_bob_index = names.index("Bob")
+print("Index of first occurrence of 'Bob' in Names List:", first_bob_index)
+#finding index of an element with start and end parameters
+second_bob_index = names.index("Bob", first_bob_index + 1)
+print("Index of second occurrence of 'Bob' in Names List:", second_bob_index)  
+
+# copying a list
+original_list = [1, 2, 3, 4, 5]
+copied_list = original_list.copy()
+print("Original List:", original_list)
+print("Copied List:", copied_list)
+print(id(original_list), id(copied_list))  # Different memory addresses 
+print("Are both lists equal?", original_list == copied_list)  # True
+print("Are both lists the same object?", original_list is copied_list)  # False
 
 
 
