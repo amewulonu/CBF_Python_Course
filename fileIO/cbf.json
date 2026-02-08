@@ -1,0 +1,20 @@
+[{
+    "name": "cbf",
+    "type": "json",
+    "description": "CBF (Coding Black Females) file.",
+    "extensions": [".cbf", ".cbf.json"],
+    "mime_type": "application/json",
+    "reader": "cbf_reader_function",
+    "writer": "cbf_writer_function",
+    "documentation_url": "https://example.com/docs/cbf_format"
+}, 
+{
+    "name": "cbf_alt",
+    "type": "json",
+    "description": "Alternative CBF file format.",
+    "extensions": [".cbf_alt", ".cbf_alt.json"],
+    "mime_type": "application/json",
+    "reader": "cbf_alt_reader_function",
+    "writer": "cbf_alt_writer_function",
+    "documentation_url": "https://example.com/docs/cbf_alt_format"
+}]
